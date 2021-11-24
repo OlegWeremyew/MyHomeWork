@@ -12,7 +12,7 @@ export type AlternativeMessageDataType = {
 function AlternativeMessage(props: AlternativeMessageDataType) {
     return (
         <div className={c.message}>
-            <img src={props.avatar} alt="avatar"/>
+            <img className={c.avatar} src={props.avatar} alt="avatar"/>
 
             <div className={c.radius}/>
 
