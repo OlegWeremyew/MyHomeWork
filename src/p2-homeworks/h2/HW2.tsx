@@ -30,7 +30,6 @@ const defaultAffairs: Array<AffairType> = [
     {_id: 6, name: 'Sleep', priority: 'low'},
     {_id: 7, name: 'Make dinner', priority: 'middle'},
 ]
-
 const defaultAlternativeAffairs: Array<AlternativeAffairType> = [
     {_id: 1, food: 'Meet', quality: 'neutral'},
     {_id: 2, food: 'Milk', quality: 'helpful'},
@@ -53,6 +52,17 @@ export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): A
         return affairs.filter(p => p.priority === 'middle')
     }
 }
+export const filterAlternativeAffairs = (alternativeAffairs: Array<AlternativeAffairType>, alternativeFilter: FilterAlternativeType): Array<AlternativeAffairType> => {
+    if (alternativeFilter === 'all') {
+        return alternativeAffairs
+    } else if (alternativeFilter === 'neutral') {
+        return alternativeAffairs.filter(p => p.quality === 'neutral')
+    } else if (alternativeFilter === 'helpful') {
+        return alternativeAffairs.filter(p => p.quality === 'helpful')
+    } else {
+        return alternativeAffairs.filter(p => p.quality === 'bad')
+    }
+}
 
 export const deleteAffair = (affairs: Array<AffairType>, _ID: number): Array<AffairType> => {
     return affairs.filter(d => d._id !== _ID)
@@ -61,9 +71,13 @@ export const deleteAffair = (affairs: Array<AffairType>, _ID: number): Array<Aff
 function HW2() {
     const [affairs, setAffairs] = useState<Array<AffairType>>(defaultAffairs)
     const [filter, setFilter] = useState<FilterType>('all')
+    const [alternativeAffairs, setAlternativeAffairs] = useState<Array<AffairType>>(defaultAffairs)
+    const [alternativeFilter, setAlternativeFilter] = useState<FilterType>('all')
 
     const filteredAffairs = filterAffairs(affairs, filter)
-    const deleteAffairCallback = (_id: number) => setAffairs(deleteAffair(affairs, _id)) // need to fix any
+    const deleteAffairCallback = (_id: number) => setAffairs(deleteAffair(affairs, _id))
+    const filterAlternativeAffairs = filterAlternativeAffairs(alternativeAffairs, alternativeFilter)
+    const deleteAlternativeAffairCallback = (_id: number) => setAlternativeAffairs(deleteAffair(affairs, _id))
 
     return (
         <div>
