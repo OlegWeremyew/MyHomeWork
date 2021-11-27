@@ -1,3 +1,16 @@
-.someClass {
+.homeworks2 {
+    color: darkred;
+    font-size: 1.6em;
+}
 
+.affair {
+    display: flex;
+}
+
+.name {
+ pading: 0px 40px;
+}
+
+.priority {
+    pading: 0px 40px;
 }

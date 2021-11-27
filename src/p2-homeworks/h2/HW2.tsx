@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import Affairs from './Affairs'
+import c from "./Affairs.module.css"
 
 // types
 export type AffairPriorityType = 'high' | 'low' | 'middle'
@@ -43,7 +44,7 @@ function HW2() {
     return (
         <div>
             <hr/>
-            homeworks 2
+            <span className={c.homeworks2}>homeworks 2</span>
 
             {/*should work (должно работать)*/}
             <Affairs
