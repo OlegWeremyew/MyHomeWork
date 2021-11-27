@@ -13,10 +13,12 @@ export type FilterType = 'all' | AffairPriorityType
 
 const defaultAffairs: Array<AffairType> = [
     {_id: 1, name: 'React', priority: 'high'},
-    {_id: 2, name: 'anime', priority: 'low'},
-    {_id: 3, name: 'games', priority: 'low'},
-    {_id: 4, name: 'work', priority: 'high'},
+    {_id: 2, name: 'Homework', priority: 'low'},
+    {_id: 3, name: 'SOCCER', priority: 'low'},
+    {_id: 4, name: 'Hobby', priority: 'high'},
     {_id: 5, name: 'html & css', priority: 'middle'},
+    {_id: 5, name: 'Sleep', priority: 'low'},
+    {_id: 5, name: 'Make dinner', priority: 'middle'},
 ]
 
 export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): Array<AffairType> => {
@@ -47,11 +49,13 @@ function HW2() {
             <span className={c.homeworks2}>homeworks 2</span>
 
             {/*should work (должно работать)*/}
-            <Affairs
-                data={filteredAffairs}
-                setFilter={setFilter}
-                deleteAffairCallback={deleteAffairCallback}
-            />
+            <div className={c.affairs}>
+                <Affairs
+                    data={filteredAffairs}
+                    setFilter={setFilter}
+                    deleteAffairCallback={deleteAffairCallback}
+                />
+            </div>
 
             <hr/>
             {/*для личного творчества, могу проверить*/}

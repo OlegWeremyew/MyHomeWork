@@ -11,11 +11,14 @@ function Affair(props: AffairPropsType) {
     const deleteCallback = () => {
         props.deleteAffairCallback(props.affair._id)
     }
+
+    const priorityClassName = c.name + " " + c[props.affair.priority]
+
     return (
         <div className={c.affair}>
             <div className={c.name}>{props.affair.name}</div>
-            <div className={c.priority}>{props.affair.priority}</div>
-            <button onClick={deleteCallback}>X</button>
+            <div className={priorityClassName}>{props.affair.priority}</div>
+            <button  className={c.button_del} onClick={deleteCallback}>X</button>
         </div>
     )
 }

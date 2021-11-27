@@ -1,16 +1,63 @@
+.affairs {
+    background-color: rgb(222 184 135);
+    border: solid 2px darkred;
+}
+
 .homeworks2 {
     color: darkred;
     font-size: 1.6em;
+    font-weight: bold;
 }
 
 .affair {
     display: flex;
+    padding-top: 15px;
+}
+
+.table {
+    margin-top: 20px;
+    margin-left: 10px;
+    padding-bottom: 20px;
+    background-color: darkgrey;
+    width: 300px;
+    border-radius: 10px;
 }
 
 .name {
- pading: 0px 40px;
+    margin-left: 20px;
+    width: 100px;
+    font-weight: bold;
 }
 
-.priority {
-    pading: 0px 40px;
+.high {
+    color: #d70505;
+}
+
+.low {
+    color: #0b7215;
+}
+
+.middle {
+    color: #6c450f;
+}
+
+.button {
+    background-color: #0d7a15;
+    margin: 15px 0px 10px 10px;
+    width: 60px;
+    height: 25px;
+    border: solid 3px darkred;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: "Book Antiqua";
+}
+
+.buttons {
+    margin-left: 10px;
+}
+
+.button_del {
+    background-color: #c2471f;
+    padding-top: 2px;
+    border-radius: 5px;
 }
