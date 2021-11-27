@@ -17,8 +17,8 @@ const defaultAffairs: Array<AffairType> = [
     {_id: 3, name: 'SOCCER', priority: 'low'},
     {_id: 4, name: 'Hobby', priority: 'high'},
     {_id: 5, name: 'html & css', priority: 'middle'},
-    {_id: 5, name: 'Sleep', priority: 'low'},
-    {_id: 5, name: 'Make dinner', priority: 'middle'},
+    {_id: 6, name: 'Sleep', priority: 'low'},
+    {_id: 7, name: 'Make dinner', priority: 'middle'},
 ]
 
 export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): Array<AffairType> => {
