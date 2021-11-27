@@ -61,3 +61,71 @@
     padding-top: 2px;
     border-radius: 5px;
 }
+
+/*alternative*/
+
+
+.alternativeAffairs {
+    background-color: rgb(222 184 135);
+    border: solid 2px darkred;
+}
+
+.alternativeAffair {
+    display: flex;
+    padding-top: 15px;
+}
+
+.alternativeTable {
+    margin-top: 20px;
+    margin-left: 10px;
+    padding-bottom: 20px;
+    background-color: #e0c3c3;
+    width: 300px;
+    border-radius: 35px 0px;
+    border: outset 3px;
+}
+
+.food {
+    margin-left: 20px;
+    width: 100px;
+    font-weight: bold;
+}
+
+.neutral {
+    color: #2472b0;
+}
+
+.helpful {
+    color: #0b7215;
+}
+
+.bad {
+    color: #cc0015;
+}
+
+.alternativeButton {
+    background-color: #77a9a3;
+    margin: 15px 0px 10px 10px;
+    width: 60px;
+    height: 25px;
+    border-radius: 10px 0px;
+    font-weight: bold;
+}
+
+.alternativeButtons {
+    margin-left: 10px;
+}
+
+.alternativeButton_del {
+    background-color: #dcb452;
+    padding-top: 2px;
+    border-radius: 5px;
+    border: dot-dash 1px darkred;
+    margin-right: 20px;
+}
+
+.title {
+    margin-top: 15px;
+    width: 300px;
+    text-align: center;
+}

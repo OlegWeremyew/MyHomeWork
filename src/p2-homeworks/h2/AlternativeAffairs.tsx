@@ -1,43 +1,43 @@
 import React from 'react'
-import {AffairType, FilterType} from './HW2'
+import {AffairType, AlternativeAffairType, FilterAlternativeType, FilterType} from './HW2'
 import c from "./Affairs.module.css"
 import AlternativeAffair from "./AlternativeAffair";
 
-type AffairsPropsType = { // need to fix any
-    data: Array<AffairType>
-    setFilter: (fileter: FilterType) => void
-    deleteAffairCallback: (id: number) => void
+type AlternativeAffairsPropsType = { // need to fix any
+    data: Array<AlternativeAffairType>
+    setAlternativeFilter: (fileter: FilterAlternativeType) => void
+    deleteAlternativeAffairCallback: (id: number) => void
 }
 
-function AlternativeAffairs(props: AffairsPropsType) {
-    const mappedAffairs = props.data.map((a: AffairType) => (
-        <AlternativeAffair // should work
-            key={a._id} // кеи ОБЯЗАТЕЛЬНЫ в 99% - так что лучше их писать всегда при создании компонент в мапе
-            affair={a}
-            deleteAffairCallback={props.deleteAffairCallback}
+function AlternativeAffairs(props: AlternativeAffairsPropsType) {
+    const mappedAffairs = props.data.map((a: AlternativeAffairType) => (
+        <AlternativeAffair
+            key={a._id}
+            alternativeAffair={a}
+            deleteAlternativeAffairCallback={props.deleteAlternativeAffairCallback}
         />
     ))
 
     const setAll = () => {
-        props.setFilter("all")
+        props.setAlternativeFilter("all")
     }
-    const setHigh = () => {
-        props.setFilter("high")
+    const setNeutral = () => {
+        props.setAlternativeFilter("neutral")
     }
-    const setMiddle = () => {
-        props.setFilter("middle")
+    const setHelpful = () => {
+        props.setAlternativeFilter("helpful")
     }
-    const setLow = () => {
-        props.setFilter("low")
+    const setBad = () => {
+        props.setAlternativeFilter("bad")
     }
     return (
         <div>
-            <div className={c.table}>{mappedAffairs}</div>
-            <div className={c.buttons}>
-                <button className={c.button} onClick={setAll}>All</button>
-                <button className={c.button} onClick={setHigh}>High</button>
-                <button className={c.button} onClick={setMiddle}>Middle</button>
-                <button className={c.button} onClick={setLow}>Low</button>
+            <div className={c.alternativeTable}>{mappedAffairs}</div>
+            <div className={c.alternativeButtons}>
+                <button className={c.alternativeButton} onClick={setAll}>All</button>
+                <button className={c.alternativeButton} onClick={setNeutral}>Neutral</button>
+                <button className={c.alternativeButton} onClick={setHelpful}>Helpful</button>
+                <button className={c.alternativeButton} onClick={setBad}>Bad</button>
             </div>
         </div>
     )

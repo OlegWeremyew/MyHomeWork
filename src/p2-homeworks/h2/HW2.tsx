@@ -3,7 +3,6 @@ import Affairs from './Affairs'
 import c from "./Affairs.module.css"
 import AlternativeAffairs from "./AlternativeAffairs";
 
-// types
 export type AffairPriorityType = 'high' | 'low' | 'middle'
 export type AffairQualityType = 'neutral' | 'helpful' | 'bad'
 
@@ -67,39 +66,40 @@ export const filterAlternativeAffairs = (alternativeAffairs: Array<AlternativeAf
 export const deleteAffair = (affairs: Array<AffairType>, _ID: number): Array<AffairType> => {
     return affairs.filter(d => d._id !== _ID)
 }
+export const deleteAlternativeAffair = (alternativeAffairs: Array<AlternativeAffairType>, _ID: number): Array<AlternativeAffairType> => {
+    return alternativeAffairs.filter(d => d._id !== _ID)
+}
 
 function HW2() {
     const [affairs, setAffairs] = useState<Array<AffairType>>(defaultAffairs)
     const [filter, setFilter] = useState<FilterType>('all')
-    const [alternativeAffairs, setAlternativeAffairs] = useState<Array<AffairType>>(defaultAffairs)
-    const [alternativeFilter, setAlternativeFilter] = useState<FilterType>('all')
+    const [alternativeAffairs, setAlternativeAffairs] = useState<Array<AlternativeAffairType>>(defaultAlternativeAffairs)
+    const [alternativeFilter, setAlternativeFilter] = useState<FilterAlternativeType>('all')
 
     const filteredAffairs = filterAffairs(affairs, filter)
     const deleteAffairCallback = (_id: number) => setAffairs(deleteAffair(affairs, _id))
-    const filterAlternativeAffairs = filterAlternativeAffairs(alternativeAffairs, alternativeFilter)
-    const deleteAlternativeAffairCallback = (_id: number) => setAlternativeAffairs(deleteAffair(affairs, _id))
+    const filteredAlternativeAffairs = filterAlternativeAffairs(alternativeAffairs, alternativeFilter)
+    const deleteAlternativeAffairCallback = (_id: number) => setAlternativeAffairs(deleteAlternativeAffair(alternativeAffairs, _id))
 
     return (
         <div>
             <hr/>
             <span className={c.homeworks2}>homeworks 2</span>
-
-            {/*should work (должно работать)*/}
             <div className={c.affairs}>
+                <div className={c.title}>To do list</div>
                 <Affairs
                     data={filteredAffairs}
                     setFilter={setFilter}
                     deleteAffairCallback={deleteAffairCallback}
                 />
             </div>
-
             <hr/>
-            {/*для личного творчества, могу проверить*/}
-            <div className={c.affairs}>
+            <div className={c.alternativeAffairs}>
+                <div className={c.title}>Products and their benefits</div>
                 <AlternativeAffairs
-                    data={filteredAffairs}
-                    setFilter={setFilter}
-                    deleteAffairCallback={deleteAffairCallback}/>
+                    data={filteredAlternativeAffairs}
+                    setAlternativeFilter={setAlternativeFilter}
+                    deleteAlternativeAffairCallback={deleteAlternativeAffairCallback}/>
                 <hr/>
             </div>
         </div>
