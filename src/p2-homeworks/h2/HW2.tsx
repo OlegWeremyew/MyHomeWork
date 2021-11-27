@@ -6,6 +6,7 @@ import AlternativeAffairs from "./AlternativeAffairs";
 // types
 export type AffairPriorityType = 'high' | 'low' | 'middle'
 export type AffairQualityType = 'neutral' | 'helpful' | 'bad'
+
 export type AffairType = {
     _id: number
     name: string
@@ -16,6 +17,7 @@ export type AlternativeAffairType = {
     food: string
     quality: AffairQualityType
 }
+
 export type FilterType = 'all' | AffairPriorityType
 export type FilterAlternativeType = 'all' | AffairQualityType
 
@@ -51,6 +53,7 @@ export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): A
         return affairs.filter(p => p.priority === 'middle')
     }
 }
+
 export const deleteAffair = (affairs: Array<AffairType>, _ID: number): Array<AffairType> => {
     return affairs.filter(d => d._id !== _ID)
 }
