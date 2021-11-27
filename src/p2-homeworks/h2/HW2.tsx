@@ -5,12 +5,19 @@ import AlternativeAffairs from "./AlternativeAffairs";
 
 // types
 export type AffairPriorityType = 'high' | 'low' | 'middle'
+export type AffairQualityType = 'neutral' | 'helpful' | 'bad'
 export type AffairType = {
     _id: number
     name: string
     priority: AffairPriorityType
 }
+export type AlternativeAffairType = {
+    _id: number
+    food: string
+    quality: AffairQualityType
+}
 export type FilterType = 'all' | AffairPriorityType
+export type FilterAlternativeType = 'all' | AffairQualityType
 
 const defaultAffairs: Array<AffairType> = [
     {_id: 1, name: 'React', priority: 'high'},
@@ -20,6 +27,17 @@ const defaultAffairs: Array<AffairType> = [
     {_id: 5, name: 'html & css', priority: 'middle'},
     {_id: 6, name: 'Sleep', priority: 'low'},
     {_id: 7, name: 'Make dinner', priority: 'middle'},
+]
+
+const defaultAlternativeAffairs: Array<AlternativeAffairType> = [
+    {_id: 1, food: 'Meet', quality: 'neutral'},
+    {_id: 2, food: 'Milk', quality: 'helpful'},
+    {_id: 3, food: 'Beef', quality: 'neutral'},
+    {_id: 4, food: 'Coffee', quality: 'neutral'},
+    {_id: 5, food: 'Tea', quality: 'helpful'},
+    {_id: 6, food: 'candy', quality: 'bad'},
+    {_id: 7, food: 'sugar', quality: 'bad'},
+    {_id: 8, food: 'salt', quality: 'bad'},
 ]
 
 export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): Array<AffairType> => {
@@ -60,11 +78,13 @@ function HW2() {
 
             <hr/>
             {/*для личного творчества, могу проверить*/}
-            <AlternativeAffairs
-                data={filteredAffairs}
-                setFilter={setFilter}
-                deleteAffairCallback={deleteAffairCallback}/>
-            <hr/>
+            <div className={c.affairs}>
+                <AlternativeAffairs
+                    data={filteredAffairs}
+                    setFilter={setFilter}
+                    deleteAffairCallback={deleteAffairCallback}/>
+                <hr/>
+            </div>
         </div>
     )
 }
