@@ -1,4 +1,4 @@
-import React, {ChangeEvent} from 'react'
+import React, {ChangeEvent, MouseEventHandler} from 'react'
 import s from './Greeting.module.css'
 
 type GreetingPropsType = {
