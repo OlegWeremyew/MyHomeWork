@@ -23,17 +23,17 @@ function HW1() {
             <hr/>
             <span className={c.homeworks1}>homeworks 1</span>
             <div>
-                <Message
-                    avatar={MessageData.avatar}
-                    name={MessageData.name}
-                    message={MessageData.message}
-                    time={MessageData.time}
-                />
-                <AlternativeMessage
-                    avatar={AlternativeMessageData.avatar}
-                    name={AlternativeMessageData.name}
-                    message={AlternativeMessageData.message}
-                    time={AlternativeMessageData.time}/>
+                    <Message
+                        avatar={MessageData.avatar}
+                        name={MessageData.name}
+                        message={MessageData.message}
+                        time={MessageData.time}
+                    />
+                    <AlternativeMessage
+                        avatar={AlternativeMessageData.avatar}
+                        name={AlternativeMessageData.name}
+                        message={AlternativeMessageData.message}
+                        time={AlternativeMessageData.time}/>
             </div>
             <hr/>
 
