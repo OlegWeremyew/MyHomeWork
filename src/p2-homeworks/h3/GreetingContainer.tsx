@@ -1,4 +1,4 @@
-import React, {ChangeEvent, MouseEventHandler, useState} from 'react'
+import React, {ChangeEvent, KeyboardEvent, useState} from 'react'
 import Greeting from './Greeting'
 import {UserType} from "./HW3";
 
@@ -7,15 +7,27 @@ type GreetingContainerPropsType = {
     addUserCallback: (name: string) => void
 }
 
-const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUserCallback,...props}: GreetingContainerPropsType) => {
-    const [name, setName] = useState<string>('') // need to fix any
-    const [error, setError] = useState<string>('') // need to fix any
+const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUserCallback}: GreetingContainerPropsType) => {
+    const [name, setName] = useState<string>('')
+    const [error, setError] = useState<string>('')
 
-    const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => { // need to fix any
-        setName(name) // need to fix
+    const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => {
+        const inputValue = e.currentTarget.value.trim()
+        if (inputValue) {
+            setName(inputValue)
+            setError("")
+        } else {
+            setName("")
+            setError("name is requireq")
+        }
     }
     const addUser = () => {
-        alert(`Hello  !`) // need to fix
+        alert(`Hello ${name} !`)
+        addUserCallback(name)
+    }
+
+    const pressBoard = (e:KeyboardEvent<HTMLInputElement>) => {
+
     }
 
     const totalUsers = 0
@@ -27,6 +39,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
             addUser={addUser}
             error={error}
             totalUsers={totalUsers}
+            pressBoard={pressBoard}
         />
     )
 }
