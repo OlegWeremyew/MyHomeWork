@@ -3,24 +3,32 @@ import s from './Greeting.module.css'
 
 type GreetingPropsType = {
     name: string
-    setNameCallback: (e: ChangeEvent<HTMLInputElement>)=> void
-    addUser: ()=> void
-    error: any
+    setNameCallback: (e: ChangeEvent<HTMLInputElement>) => void
+    addUser: () => void
+    pressBoard: (e: KeyboardEvent<HTMLInputElement>) => void
+    error: string
     totalUsers: number
-    pressBoard: (e:KeyboardEvent<HTMLInputElement>)=>void
 }
 
 const Greeting: React.FC<GreetingPropsType> = (
     {name, setNameCallback, addUser, error, totalUsers, pressBoard}
 ) => {
-    const inputClass = s.error + " " + (name === ""? + s.active: "")
+    const inputClass = error? s.errorInput : s.input
 
     return (
-        <div>
-            <input value={name} onChange={setNameCallback} className={inputClass} onKeyPress={pressBoard} />
-            <span>{error}</span>
+        <div className={s.greeting}>
+            <div>
+                <input value={name}
+                       onChange={setNameCallback}
+                       className={s.inputClass}
+                       onKeyPress={pressBoard}
+                       onBlur={setNameCallback}
+                />
+                <div className={s.error}>{error}</div>
+            </div>
+
             <button onClick={addUser} className={inputClass}>add</button>
-            <span>{totalUsers}</span>
+            <div className={s.count}>{totalUsers}</div>
         </div>
     )
 }
