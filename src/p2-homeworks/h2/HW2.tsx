@@ -100,6 +100,7 @@ function HW2() {
                     data={filteredAlternativeAffairs}
                     setAlternativeFilter={setAlternativeFilter}
                     deleteAlternativeAffairCallback={deleteAlternativeAffairCallback}/>
+                    alternativeFilter={alternativeFilter}
                 <hr/>
             </div>
         </div>

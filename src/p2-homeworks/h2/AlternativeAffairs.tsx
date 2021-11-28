@@ -1,12 +1,13 @@
-import React from 'react'
-import {AffairType, AlternativeAffairType, FilterAlternativeType, FilterType} from './HW2'
+import React, {Dispatch, SetStateAction} from 'react'
+import {AlternativeAffairType, FilterAlternativeType} from './HW2'
 import c from "./Affairs.module.css"
 import AlternativeAffair from "./AlternativeAffair";
 
-type AlternativeAffairsPropsType = { // need to fix any
+type AlternativeAffairsPropsType = {
     data: Array<AlternativeAffairType>
-    setAlternativeFilter: (fileter: FilterAlternativeType) => void
+    setAlternativeFilter: Dispatch<SetStateAction<FilterAlternativeType>>
     deleteAlternativeAffairCallback: (id: number) => void
+    alternativeFilter: FilterAlternativeType
 }
 
 function AlternativeAffairs(props: AlternativeAffairsPropsType) {
@@ -30,14 +31,19 @@ function AlternativeAffairs(props: AlternativeAffairsPropsType) {
     const setBad = () => {
         props.setAlternativeFilter("bad")
     }
+
+    const activeClass = (alternativeFilter: FilterAlternativeType) => {
+        return c.alternativeButton + (props.alternativeFilter === alternativeFilter? " " + c.active: "")
+    }
+
     return (
         <div>
             <div className={c.alternativeTable}>{mappedAffairs}</div>
             <div className={c.alternativeButtons}>
-                <button className={c.alternativeButton} onClick={setAll}>All</button>
-                <button className={c.alternativeButton} onClick={setNeutral}>Neutral</button>
-                <button className={c.alternativeButton} onClick={setHelpful}>Helpful</button>
-                <button className={c.alternativeButton} onClick={setBad}>Bad</button>
+                <button className={activeClass("all")} onClick={setAll}>All</button>
+                <button className={activeClass("neutral")} onClick={setNeutral}>Neutral</button>
+                <button className={activeClass("helpful")} onClick={setHelpful}>Helpful</button>
+                <button className={activeClass("bad")} onClick={setBad}>Bad</button>
             </div>
         </div>
     )
