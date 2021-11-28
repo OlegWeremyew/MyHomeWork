@@ -43,13 +43,13 @@
 
 .button {
     background-color: #77a97b;
-    margin: 15px 0px 10px 10px;
+    margin: 15px 0 10px 10px;
     width: 60px;
     height: 25px;
     border: dot-dash 1px darkred;
     border-radius: 5px;
     font-weight: bold;
-    font-family: "Book Antiqua";
+    font-family: Century;
 }
 
 .buttons {
@@ -81,7 +81,7 @@
     padding-bottom: 20px;
     background-color: #e0c3c3;
     width: 300px;
-    border-radius: 35px 0px;
+    border-radius: 35px 0 35px 0;
     border: outset 3px;
 }
 
@@ -105,10 +105,10 @@
 
 .alternativeButton {
     background-color: #77a9a3;
-    margin: 15px 0px 10px 10px;
+    margin: 15px 0 10px 10px;
     width: 60px;
     height: 25px;
-    border-radius: 10px 0px;
+    border-radius: 10px 0;
     font-weight: bold;
 }
 
