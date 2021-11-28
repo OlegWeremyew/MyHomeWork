@@ -7,9 +7,9 @@ type GreetingContainerPropsType = {
     addUserCallback: (name: string) => void
 }
 
-const GreetingContainer: React.FC<GreetingContainerPropsType> = (props: GreetingContainerPropsType) => {
-    const [name, setName] = useState<any>('') // need to fix any
-    const [error, setError] = useState<any>('') // need to fix any
+const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUserCallback,...props}: GreetingContainerPropsType) => {
+    const [name, setName] = useState<string>('') // need to fix any
+    const [error, setError] = useState<string>('') // need to fix any
 
     const setNameCallback = (e: any) => { // need to fix any
         setName('') // need to fix
@@ -18,7 +18,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = (props: Greeting
         alert(`Hello  !`) // need to fix
     }
 
-    const totalUsers = 0 // need to fix
+    const totalUsers = 0
 
     return (
         <Greeting
