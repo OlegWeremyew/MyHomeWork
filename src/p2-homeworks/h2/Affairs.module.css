@@ -129,3 +129,7 @@
     width: 300px;
     text-align: center;
 }
+
+.active {
+    background-color: #56c760;
+}

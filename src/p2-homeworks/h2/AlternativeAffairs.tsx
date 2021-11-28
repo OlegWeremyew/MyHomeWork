@@ -5,7 +5,7 @@ import AlternativeAffair from "./AlternativeAffair";
 
 type AlternativeAffairsPropsType = {
     data: Array<AlternativeAffairType>
-    setAlternativeFilter: Dispatch<SetStateAction<FilterAlternativeType>>
+    setAlternativeFilter: (alternativeFilter: FilterAlternativeType) => void
     deleteAlternativeAffairCallback: (id: number) => void
     alternativeFilter: FilterAlternativeType
 }
@@ -33,7 +33,7 @@ function AlternativeAffairs(props: AlternativeAffairsPropsType) {
     }
 
     const activeClass = (alternativeFilter: FilterAlternativeType) => {
-        return c.alternativeButton + (props.alternativeFilter === alternativeFilter? " " + c.active: "")
+        return c.alternativeButton + (props.alternativeFilter === alternativeFilter ? " " + c.active : "")
     }
 
     return (
