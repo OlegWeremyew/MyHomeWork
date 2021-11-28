@@ -7,7 +7,7 @@ type GreetingContainerPropsType = {
     addUserCallback: (name: string) => void
 }
 
-const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUserCallback}: GreetingContainerPropsType) => {
+const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUserCallback}) => {
     const [name, setName] = useState<string>('')
     const [error, setError] = useState<string>('')
 
@@ -15,9 +15,9 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
         const inputValue = e.currentTarget.value.trim()
         if (inputValue) {
             setName(inputValue)
-            error && setError("")
+            setError("")
         } else {
-            name && setName("")
+            setName("")
             setError("empty name is blocked")
         }
     }
@@ -30,9 +30,6 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
     const pressBoard = (e:KeyboardEvent<HTMLInputElement>) => {
         if(e.key === "Enter" && name) {
             addUser()
-        } else {
-            setError("empty name is blocked")
-            setName("")
         }
     }
 
