@@ -1,7 +1,18 @@
+.homeworks3 {
+    color: darkred;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
 .greeting {
     display: flex;
     align-items: flex-start;
     margin-left: 5px;
+}
+
+.input{
+    width: 170px;
+    border: inset 2px;
 }
 
 .error {

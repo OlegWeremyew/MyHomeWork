@@ -101,8 +101,8 @@ function HW2() {
                     setAlternativeFilter={setAlternativeFilter}
                     deleteAlternativeAffairCallback={deleteAlternativeAffairCallback}
                     alternativeFilter={alternativeFilter}/>
-                <hr/>
             </div>
+            <hr/>
         </div>
     )
 }

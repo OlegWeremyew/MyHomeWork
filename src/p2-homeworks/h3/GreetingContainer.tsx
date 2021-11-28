@@ -13,23 +13,31 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
 
     const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => {
         const inputValue = e.currentTarget.value.trim()
-        if (inputValue) {
+        if (inputValue !== "") {
             setName(inputValue)
+            error && setError("")
+        } else {
+            name && setName("")
+            setError("empty name is blocked")
+        }
+    }
+    const addUser = () => {
+        if (name) {
+            addUserCallback(name)
+            alert(`Hello: "${name}" !`)
+            setName("")
             setError("")
         } else {
             setName("")
             setError("empty name is blocked")
         }
     }
-    const addUser = () => {
-        addUserCallback(name)
-        alert(`Hello: "${name}" !`)
-        setName("")
-    }
 
-    const pressBoard = (e:KeyboardEvent<HTMLInputElement>) => {
-        if(e.key === "Enter" && name) {
+    const pressBoard = (e: KeyboardEvent<HTMLInputElement>) => {
+        if (e.currentTarget.value.trim() && e.key === "Enter") {
             addUser()
+        } else {
+            setError("empty name is blocked")
         }
     }
 
