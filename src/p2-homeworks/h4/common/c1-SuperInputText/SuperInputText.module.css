@@ -3,12 +3,20 @@
 }
 
 .errorInput {
-    border: 3px solid lime;
-    background: red;
+    margin: 10px;
+    background-color: #a97783;
+    color: #130cbd;
+    border: 2px solid red;
 }
 
 .error {
     color: red;
     height: 21px;
     margin-left: 10px;
+    font-weight: bolder;
+}
+
+.input:focus {
+    outline: none;
+    border: solid 2px green;
 }
