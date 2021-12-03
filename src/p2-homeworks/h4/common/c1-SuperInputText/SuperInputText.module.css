@@ -9,4 +9,6 @@
 
 .error {
     color: red;
+    height: 21px;
+    margin-left: 10px;
 }
