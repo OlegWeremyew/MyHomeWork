@@ -1,0 +1,47 @@
+.headerComp:hover {
+    margin-top: 50px;
+}
+
+.headerComp {
+    margin-top: 0;
+    height: 90px;
+    width: 100vh;
+    border-radius: 15px;
+    background-color: #d7d3d3;
+    box-shadow: 3px 3px 10px #000;
+    position: fixed;
+    z-index: 1;
+    top: -80px;
+    transition-duration: 0.5s;
+}
+
+.headerComp .container {
+    margin: 30px 0 auto;
+    padding: 12px;
+    height: auto;
+    font-size: 20px;
+}
+
+
+.navLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.navLink {
+    margin-bottom: 5px;
+    color: black;
+    text-decoration: none;
+}
+
+.active {
+    color: darkred;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-decoration: underline;
+}
+
+.span {
+    margin: 0 5px;
+}
