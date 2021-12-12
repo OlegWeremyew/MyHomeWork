@@ -1,7 +1,21 @@
 .default {
+    background-color: #dcb87e;
+    width: 70px;
+    height: 30px;
+    font-weight: bold;
+    border-radius: 4px;
+    margin: 0 2px;
+}
 
+.default:disabled {
+    background-color: #d3bfa3;
 }
 
 .red {
     background: red;
+    width: 70px;
+    height: 30px;
+    font-weight: bold;
+    border-radius: 4px;
+    margin: 0 2px;
 }
