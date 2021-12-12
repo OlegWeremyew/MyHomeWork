@@ -20,7 +20,7 @@
     "uuid": "^8.3.2",
     "web-vitals": "^1.0.1"
   },
-  "homepage": "https://OlegWeremyew.github.io/homework",
+  "homepage": "https://olegweremyew.github.io/homework",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
