@@ -19,7 +19,7 @@ const AlternativeMessageData = {
 
 function HW1() {
     return (
-        <div>
+        <div className={c.main}>
             <hr/>
             <span className={c.homeworks1}>homeworks 1</span>
             <div>

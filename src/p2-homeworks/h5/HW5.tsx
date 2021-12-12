@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from './Header'
-import RouteTo from './Routes'
+import RouteTo from './RouteTo'
 import {HashRouter} from "react-router-dom";
 
 function HW5() {
