@@ -86,7 +86,7 @@ function HW2() {
             <hr/>
             <span className={c.homeworks2}>homeworks 2</span>
             <div className={c.affairs}>
-                <div className={c.title}>To do list</div>
+                <div className={c.title}>Todolist</div>
                 <Affairs
                     data={filteredAffairs}
                     setFilter={setFilter}

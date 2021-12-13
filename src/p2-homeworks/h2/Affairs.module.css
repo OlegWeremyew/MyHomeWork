@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&display=swap');
+
 .affairs {
     background-color: rgb(222 184 135);
     border: solid 2px darkred;
@@ -128,6 +130,10 @@
     margin-top: 15px;
     width: 300px;
     text-align: center;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 30px;
+    color: #5b0505;
+    text-decoration: underline;
 }
 
 .active {

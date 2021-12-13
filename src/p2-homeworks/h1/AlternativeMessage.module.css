@@ -1,7 +1,8 @@
 .message {
     display: flex;
     align-items: flex-end;
-    margin: 20px;
+    padding: 20px;
+    background-color: rgb(222 184 135);
 }
 
 .avatar {
