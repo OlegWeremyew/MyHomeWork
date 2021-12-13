@@ -12,7 +12,7 @@ const MessageData = {
 
 const AlternativeMessageData = {
     avatar: "https://www.cnet.com/a/img/liJ9UZA87zs1viJiuEfVnL7YYfw=/940x0/2020/05/18/5bac8cc1-4bd5-4496-a8c3-66a6cd12d0cb/fb-avatar-2.jpg",
-    name: 'Migel',
+    name: 'Diana',
     message: 'Cute, but the glasses would have melted if real',
     time: '12:37',
 }
@@ -22,20 +22,20 @@ function HW1() {
         <div className={c.main}>
             <hr/>
             <span className={c.homeworks1}>homeworks 1</span>
-            <div>
+            <div className={c.container}>
                 <Message
                     avatar={MessageData.avatar}
                     name={MessageData.name}
                     message={MessageData.message}
                     time={MessageData.time}
                 />
+                <div className={c.cut}/>
                 <AlternativeMessage
                     avatar={AlternativeMessageData.avatar}
                     name={AlternativeMessageData.name}
                     message={AlternativeMessageData.message}
                     time={AlternativeMessageData.time}/>
             </div>
-            <hr/>
         </div>
     )
 }

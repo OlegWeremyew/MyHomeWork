@@ -7,3 +7,11 @@
     font-size: 1.6em;
     font-weight: bold;
 }
+
+.container{
+    border: solid 2px darkred;
+}
+
+.cut{
+    border: solid 1px darkred;
+}

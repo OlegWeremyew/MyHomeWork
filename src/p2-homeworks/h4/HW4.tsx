@@ -23,7 +23,7 @@ function HW4() {
     return (
         <div>
             <hr/>
-            <span className={c.homeworks1}>homeworks 4</span>
+            <span className={c.homeworks4}>homeworks 4</span>
 
             <div className={s.column}>
                 <SuperInputText
@@ -79,7 +79,6 @@ function HW4() {
             {/*<AlternativeSuperInputText/>*/}
             {/*<AlternativeSuperButton/>*/}
             {/*<AlternativeSuperCheckbox/>*/}
-            <hr/>
         </div>
     )
 }
