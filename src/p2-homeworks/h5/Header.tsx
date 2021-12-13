@@ -10,6 +10,7 @@ function Header() {
         <div className={s.headerComp}>
             <div className={s.container}>
                 <div className={s.navLinks}>
+                    <div className={s.square}></div>
                     <span className={s.span}><NavLink to={'/'} className={(navLink) => (match ? s.active : s.navLink)}>PreJunior</NavLink></span>
                     <span className={s.span}><NavLink to={'/junior'} className={(navLink) => (navLink.isActive ? s.active : s.navLink)}>Junior</NavLink></span>
                     <span className={s.span}><NavLink to={'/junior_pluse'} className={(navLink) => (navLink.isActive ? s.active : s.navLink)}>JuniorPluse</NavLink></span>

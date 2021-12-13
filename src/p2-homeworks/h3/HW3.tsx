@@ -18,13 +18,11 @@ function HW3() {
 
     return (
         <div>
-            <hr/>
             <div>
                 <span className={s.homeworks3}>homeworks 3</span>
             </div>
-            <div>
+            <div className={s.column}>
                 <GreetingContainer users={users} addUserCallback={addUserCallback}/>
-                <hr/>
                 {/*<AlternativeGreeting/>*/}
             </div>
         </div>

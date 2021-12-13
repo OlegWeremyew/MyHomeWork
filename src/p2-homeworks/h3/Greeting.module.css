@@ -29,4 +29,11 @@
 }
 
 .count {
+
+}
+
+.column {
+    background-color: rgb(222 184 135);
+    border: solid 2px darkred;
+    padding: 30px 0;
 }
