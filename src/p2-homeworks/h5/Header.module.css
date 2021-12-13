@@ -17,7 +17,6 @@
 
 .headerComp .container {
     margin: 30px 0 auto;
-    padding: 12px;
     height: auto;
     font-size: 20px;
 }
@@ -36,11 +35,18 @@
     text-decoration: none;
 }
 
+.navLink:hover {
+    margin-bottom: 5px;
+    color: #516e49;
+    text-decoration: underline;
+}
+
 .active {
     color: darkred;
     font-weight: 600;
     margin-bottom: 5px;
     text-decoration: underline;
+    font-weight: 700;
 }
 
 .span {
@@ -49,6 +55,7 @@
 
 .square{
     width: 25px;
-    height: 45px;
+    height: 70px;
+    border-radius: 0 0 17px 0 ;
     background-color: #768c36;
 }
