@@ -1,4 +1,4 @@
-.main{
+.main {
     background-color: rgb(222 184 135);
     border: 2px solid darkred;
     padding: 10px 0;
@@ -8,10 +8,6 @@
     color: darkred;
     font-size: 1.6em;
     font-weight: bold;
-}
-
-.btn_h6:hover {
-    background-color: #905e1c;
 }
 
 .span {

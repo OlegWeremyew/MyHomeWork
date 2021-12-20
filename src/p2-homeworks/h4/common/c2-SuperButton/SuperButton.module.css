@@ -7,6 +7,10 @@
     margin: 0 2px;
 }
 
+.default:hover {
+    background-color: #905e1c;
+}
+
 .default:disabled {
     background-color: #d3bfa3;
 }
@@ -18,4 +22,8 @@
     font-weight: bold;
     border-radius: 4px;
     margin: 0 2px;
+}
+
+.red:hover {
+    background-color: #702424;
 }
