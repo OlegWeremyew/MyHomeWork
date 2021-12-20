@@ -16,24 +16,24 @@ function HW6() {
 
     return (
         <div>
-            <hr/>
             <span className={s.homeworks6}>homeworks 6</span>
 
             {/*should work (должно работать)*/}
-            <div>
-                <SuperEditableSpan
-                    value={value}
-                    onChangeText={setValue}
-                    spanProps={{children: value ? undefined : 'enter text...'}}
-                />
-            </div>
-            <SuperButton className={s.btn_h6} onClick={save}>save</SuperButton>
-            <SuperButton className={s.btn_h6} onClick={restore}>restore</SuperButton>
+            <div className={s.main}>
+                <div>
+                    <SuperEditableSpan
+                        value={value}
+                        onChangeText={setValue}
+                        spanProps={{children: value ? undefined : 'click me...'}}
+                    />
+                </div>
+                <SuperButton className={s.btn_h6} onClick={save}>save</SuperButton>
+                <SuperButton className={s.btn_h6} onClick={restore}>restore</SuperButton>
 
+            </div>
             <hr/>
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeSuperEditableSpan/>*/}
-            <hr/>
         </div>
     )
 }

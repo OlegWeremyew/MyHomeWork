@@ -1,3 +1,9 @@
+.main{
+    background-color: rgb(222 184 135);
+    border: 2px solid darkred;
+    padding: 10px 0;
+}
+
 .homeworks6 {
     color: darkred;
     font-size: 1.6em;
@@ -6,4 +12,13 @@
 
 .btn_h6:hover {
     background-color: #905e1c;
+}
+
+.span {
+    display: inline-block;
+    padding: 5px 0 10px 0;
+    cursor: pointer; /* выделение курсора */
+    color: #492c06;
+    font-weight: 700;
+    font-size: 16px;
 }
