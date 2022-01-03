@@ -1,0 +1,45 @@
+.main {
+    margin-top: 60px;
+}
+
+.homeworks8 {
+    color: darkred;
+    font-size: 1.6em;
+    font-weight: bold;
+
+}
+
+.container {
+    border: solid 2px darkred;
+}
+
+.cut {
+    border: solid 1px darkred;
+}
+
+hr {
+    border: solid 1px darkred;
+}
+
+.buttons{
+    margin-top: 10px;
+    margin-left: 15px;
+    display: flex;
+}
+
+.items{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin-left: 15px;
+    margin-top: 5px;
+    color: #5b0505;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.age{
+    color: #5b0505;
+    font-weight: 700;
+    font-style: normal;
+}

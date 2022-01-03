@@ -1,6 +1,6 @@
 .default {
     background-color: #dcb87e;
-    width: 70px;
+    min-width: 70px;
     height: 30px;
     font-weight: bold;
     border-radius: 4px;
