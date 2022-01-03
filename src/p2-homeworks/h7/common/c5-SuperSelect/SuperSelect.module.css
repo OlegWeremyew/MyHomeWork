@@ -1,0 +1,36 @@
+.select {
+    width: 100px;
+    padding: 1px 55px 8px 5px;
+
+    cursor: pointer;
+    background-color: #ab7e36;
+    appearance: auto;
+
+    border: 2px solid #8b0000;
+    border-radius: 3px;
+    color: #5b0505;
+    font-size: 20px;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.select:focus {
+    outline: none;
+    border: 2px solid #5b0505;
+}
+
+.option {
+    color: #ffffff;
+    background-color: #8d5f19;
+}
+
+.option:checked{
+    background-color: #734609;
+    color: #5b0505;
+    font-weight: 700;
+}
+
+.option:hover{
+    box-shadow: 0 0 10px 100px #000000 inset;
+    transition: all .2s ease-in-out;
+    background-color: #56c760;
+}
