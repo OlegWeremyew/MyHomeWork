@@ -1,0 +1,27 @@
+.homeworks9 {
+    color: darkred;
+    font-size: 1.6em;
+    font-weight: bold;
+
+}
+
+.main {
+    margin-left: 15px;
+    margin-top: 7px;
+}
+
+.dateAndTime {
+    color: #5b0505;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.text {
+    color: #5b0505;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.buttons {
+    margin-top: 7px;
+}
