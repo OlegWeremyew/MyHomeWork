@@ -6,7 +6,7 @@
     color: darkred;
     font-size: 1.6em;
     font-weight: bold;
-
+    margin-left: 15px;
 }
 
 .container {
@@ -21,13 +21,13 @@ hr {
     border: solid 1px darkred;
 }
 
-.buttons{
+.buttons {
     margin-top: 10px;
     margin-left: 15px;
     display: flex;
 }
 
-.items{
+.items {
     display: flex;
     justify-content: space-between;
     width: 300px;
@@ -38,8 +38,48 @@ hr {
     font-style: italic;
 }
 
-.age{
+.age {
     color: #5b0505;
     font-weight: 700;
     font-style: normal;
+}
+
+
+.alternativeMain {
+    width: 280px;
+    text-align: center;
+}
+
+.alternative {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 30px;
+    color: #5b0505;
+    text-decoration: underline;
+}
+
+.itemsAlternative {
+    border: 1px solid;
+    border-radius: 3px;
+    padding: 3px;
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    margin-left: 15px;
+    margin-top: 5px;
+    color: #5b0505;
+    font-weight: 600;
+    font-style: italic;
+    background-color: #DEB887;
+}
+
+.buttonsAlternative {
+    margin-top: 10px;
+    margin-left: 25px;
+    display: flex;
+}
+
+.ageAlternative {
+    color: #5b0505;
+    font-weight: 700;
+    font-style: italic;
 }

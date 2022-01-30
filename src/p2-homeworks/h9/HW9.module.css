@@ -2,7 +2,7 @@
     color: darkred;
     font-size: 1.6em;
     font-weight: bold;
-
+    margin-left: 15px;
 }
 
 .main {
@@ -24,4 +24,45 @@
 
 .buttons {
     margin-top: 7px;
+}
+
+
+.alternative {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 30px;
+    color: #5b0505;
+    text-decoration: underline;
+    margin-left: 15px;
+}
+
+.dateAndTimeAlternative {
+    color: #654110;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.timeArea {
+    background-color: #DEB887;
+    width: 160px;
+    border: 1px inset;
+    text-align: center;
+    padding: 3px 0;
+    margin-bottom: 2px;
+    margin-left: 35px;
+    border-radius: 10px 5px;
+}
+
+.buttonsAlternative {
+    margin-top: 7px;
+    margin-left: 42px;
+    transform: skew(-7deg);
+    margin-bottom: 10px;
+}
+
+.mainAlternative {
+    margin-left: 15px;
+    margin-top: 7px;
+    border: 3px outset #5b0505;
+    border-radius: 20px 5px;
+    width: 250px;
 }

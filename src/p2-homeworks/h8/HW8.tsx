@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {homeWorkReducer} from './bll/homeWorkReducer'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
 import c from "./HW8.module.css"
+import {AlternativePeople} from "./AlternativePeople";
 
 export type UserType = {
     _id: number
@@ -22,7 +23,6 @@ const initialPeople: Array<UserType> = [
 function HW8() {
     const [people, setPeople] = useState<Array<UserType>>(initialPeople)
 
-    // need to fix any
     const finalPeople = people.map((p: UserType) => (
         <div key={p._id} className={c.items}>
             <span>Звать: <span className={c.age}>{p.name} </span></span>
@@ -38,8 +38,6 @@ function HW8() {
         <div className={c.main}>
             <hr/>
             <span className={c.homeworks8}>homeworks 8</span>
-
-            {/*should work (должно работать)*/}
             {finalPeople}
             <div className={c.buttons}>
                 <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
@@ -47,8 +45,7 @@ function HW8() {
                 <div><SuperButton onClick={chek18}>check 18</SuperButton></div>
             </div>
             <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativePeople/>*/}
+            <AlternativePeople/>
             <hr/>
         </div>
     )

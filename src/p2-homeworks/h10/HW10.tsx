@@ -20,7 +20,7 @@ function HW10() {
 
     return (
         <div>
-            <hr/>
+            <div className={c.main}>
             <span className={c.homeworks10}>homeworks 10</span>
             {loading
                 ? (
@@ -31,9 +31,8 @@ function HW10() {
                     </div>
                 )
             }
-
+            </div>
             <hr/>
-            {/*для личного творчества, могу проверить*/}
             <Alternative/>
             <hr/>
         </div>

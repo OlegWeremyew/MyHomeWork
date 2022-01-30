@@ -19,7 +19,7 @@ export const Alternative = () => {
     };
 
     return (
-        <>
+        <div  className={c.main}>
             <span className={c.alternative}>Alternative Preloader</span>
             {loading
                 ? (
@@ -30,6 +30,6 @@ export const Alternative = () => {
                     </div>
                 )
             }
-        </>
+        </div>
     );
 };
