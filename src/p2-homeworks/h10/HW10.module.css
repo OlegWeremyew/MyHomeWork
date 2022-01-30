@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&display=swap');
+
+.homeworks10 {
+    color: darkred;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.alternative {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 30px;
+    color: #5b0505;
+    text-decoration: underline;
+}

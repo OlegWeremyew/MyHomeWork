@@ -1,14 +1,42 @@
 const initState = {
-
+    PreloaderStatus: false,
+    SecondPreloaderStatus: false,
 }
 
-export const loadingReducer = (state = initState, action: any): any => { // fix any
+export type initialStateType = typeof initState
+export type ActionType = loadingACType
+    | activesPreloaderACType
+
+export const loadingReducer = (state: initialStateType = initState, action: ActionType): initialStateType => {
     switch (action.type) {
-        case '': {
-            return state
+        case 'CHANGE_PRELOADER_STATUS': {
+            return {
+                ...state,
+                PreloaderStatus: action.PreloaderStatus
+            }
         }
-        default: return state
+        case 'CHANGE_SECOND_PRELOADER_STATUS': {
+            return {
+                ...state,
+                SecondPreloaderStatus: action.SecondPreloaderStatus
+            }
+        }
+        default:
+            return state
     }
 }
+export type loadingACType = ReturnType<typeof loadingAC>
+export const loadingAC = (PreloaderStatus: boolean) => {
+    return {
+        type: 'CHANGE_PRELOADER_STATUS',
+        PreloaderStatus,
+    } as const
+}
 
-export const loadingAC = (): any => {} // fix any
+export type activesPreloaderACType = ReturnType<typeof activesPreloaderAC>
+export const activesPreloaderAC = (SecondPreloaderStatus: boolean) => {
+    return {
+        type: 'CHANGE_SECOND_PRELOADER_STATUS',
+        SecondPreloaderStatus,
+    } as const
+}

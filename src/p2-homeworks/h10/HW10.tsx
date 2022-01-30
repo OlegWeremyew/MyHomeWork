@@ -1,25 +1,30 @@
 import React from 'react'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import {useDispatch, useSelector} from "react-redux";
+import {AppStoreType} from "./bll/store";
+import {loadingAC} from "./bll/loadingReducer";
+import Preloader from "./assets/Preloader.gif"
+import c from "./HW10.module.css"
+import {Alternative} from "./bll/Alternative";
 
 function HW10() {
-    // useSelector, useDispatch
-    const loading = false
+    const loading = useSelector<AppStoreType, boolean>(state => state.loading.PreloaderStatus)
+    const dispatch = useDispatch()
 
     const setLoading = () => {
-        // dispatch
-        // setTimeout
-        console.log('loading...')
+        dispatch(loadingAC(true))
+        setTimeout(() => {
+            dispatch(loadingAC(false))
+        }, 2000)
     };
 
     return (
         <div>
             <hr/>
-            homeworks 10
-
-            {/*should work (должно работать)*/}
+            <span className={c.homeworks10}>homeworks 10</span>
             {loading
                 ? (
-                    <div>крутилка...</div>
+                    <div><img src={Preloader} alt="preloader"/></div>
                 ) : (
                     <div>
                         <SuperButton onClick={setLoading}>set loading...</SuperButton>
@@ -29,7 +34,7 @@ function HW10() {
 
             <hr/>
             {/*для личного творчества, могу проверить*/}
-            {/*<Alternative/>*/}
+            <Alternative/>
             <hr/>
         </div>
     )
