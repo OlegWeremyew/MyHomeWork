@@ -16,3 +16,7 @@
     color: #5b0505;
     text-decoration: underline;
 }
+
+.Preloaders {
+    display: flex;
+}

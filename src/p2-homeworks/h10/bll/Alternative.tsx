@@ -19,14 +19,18 @@ export const Alternative = () => {
     };
 
     return (
-        <div  className={c.main}>
+        <div className={c.main}>
             <span className={c.alternative}>Alternative Preloader</span>
             {loading
                 ? (
-                    <div><img src={AlternativePreloader} alt="preloader"/></div>
+                    <div className={c.Preloaders}>
+                        <div><img src={AlternativePreloader} alt="preloader"/></div>
+                        <div><img src={AlternativePreloader} alt="preloader"/></div>
+                        <div><img src={AlternativePreloader} alt="preloader"/></div>
+                    </div>
                 ) : (
-                    <div>
-                        <SuperButton onClick={activesPreloader}>please wait... </SuperButton>
+                    <div className={c.alternativeButtons}>
+                        <SuperButton>please wait... </SuperButton>
                     </div>
                 )
             }

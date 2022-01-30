@@ -32,7 +32,6 @@ function HW6() {
 
             </div>
             <hr/>
-            {/*для личного творчества, могу проверить*/}
             {/*<AlternativeSuperEditableSpan/>*/}
         </div>
     )
