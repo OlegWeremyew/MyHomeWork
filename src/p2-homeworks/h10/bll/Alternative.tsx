@@ -30,7 +30,7 @@ export const Alternative = () => {
                     </div>
                 ) : (
                     <div className={c.alternativeButtons}>
-                        <SuperButton>please wait... </SuperButton>
+                        <SuperButton onClick={activesPreloader}>please wait... </SuperButton>
                     </div>
                 )
             }
