@@ -4,6 +4,7 @@
 
 .dark-text {
     color: aliceblue;
+    font-weight: 700;
 }
 
 .red {
@@ -11,7 +12,8 @@
 }
 
 .red-text {
-    color: aqua;
+    color: #00ffc4;
+    font-weight: 700;
 }
 
 .some {
@@ -20,4 +22,16 @@
 
 .some-text {
     color: darkslateblue;
+    font-weight: 700;
+}
+
+.homeworks12 {
+    color: darkred;
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.main {
+    margin-left: 15px;
 }
