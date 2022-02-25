@@ -19,7 +19,7 @@ export const Request = () => {
                 if (data.status === 200) {
                     setMessage(data.data.errorText)
                 }
-                if(data.status===500) {
+                if (data.status === 500) {
                     setMessage(data.data.errorText)
                 }
             })
@@ -29,7 +29,10 @@ export const Request = () => {
         <div className={s.main}>
             <SuperButton onClick={onClickRequest}>Трунь</SuperButton>
             <SuperCheckbox type='checkbox' checked={checked} onChange={onChangeValue}/>
-            <div> Текст ответа: {message}</div>
+            <div className={s.text}>
+                <span className={s.answer}>Текст ответа: </span>
+                {message}
+            </div>
         </div>
     );
 };

@@ -2,3 +2,14 @@
     margin-left: 15px;
     margin-top: 5px;
 }
+
+.text {
+    color: #5b0505;
+    font-weight: 500;
+}
+
+.answer {
+    font-style: italic;
+    font-weight: 700;
+    color: #8d3030;
+}
