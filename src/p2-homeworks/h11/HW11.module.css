@@ -1,0 +1,19 @@
+.homeworks11 {
+    color: darkred;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.main{
+    margin-left: 15px;
+}
+
+.content__item1 {
+    margin-top: 10px;
+}
+
+.content__item2 {
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+}
